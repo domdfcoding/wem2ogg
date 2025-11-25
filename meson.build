@@ -1,10 +1,10 @@
 project('purelib-and-platlib', ['c', 'cpp'],
 default_options : ['c_std=c11', 'cpp_std=c++14'])
 
-#r = run_command('python3', 'build_wwise_audio_tools.py')
-#output = r.stdout().strip()
-#errortxt = r.stderr().strip()
-#message('@0@'.format(errortxt))
+r = run_command('python3', 'build_wwise_audio_tools.py')
+output = r.stdout().strip()
+errortxt = r.stderr().strip()
+message('@0@'.format(errortxt))
 
 
 py = import('python').find_installation(pure: false)
