@@ -13,10 +13,11 @@ dir_base = meson.current_source_dir()
 cc = meson.get_compiler('cpp')
 wwise = cc.find_library('wwtools', dirs: join_paths(dir_base, 'wwise-audio-tools/build/lib'))
 
-#py.install_sources(
-#    ['misc/__init__.py', 'misc/py.typed', 'wem2ogg.pyi'],
-#    subdir: 'wem2ogg'
-#)
+
+py.install_sources(
+    ['wem2ogg-stubs/__init__.pyi'],
+    subdir: 'wem2ogg-stubs'
+)
 
 py.extension_module(
     'wem2ogg',
