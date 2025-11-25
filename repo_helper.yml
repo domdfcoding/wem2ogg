@@ -27,8 +27,11 @@ additional_ignore:
   - "old/"
 
 tox_unmanaged:
+  - "testenv"
+  - "testenv:build"
   - "testenv:.package"
   - "tox"
 
 exclude_files:
   - actions
+  - justfile
