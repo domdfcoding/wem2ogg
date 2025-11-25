@@ -100,3 +100,15 @@ To install with ``pip``:
 	$ python -m pip install wem2ogg
 
 .. end installation
+
+Usage
+--------------
+
+``wem2ogg`` provides a single function, ``wem_to_ogg``.
+
+.. code-block:: python
+
+	def wem_to_ogg(wem_data: bytes) -> bytes: ...
+
+The function takes the contents of a Wwise ``.wem`` file,
+and returns the contents of a ``.ogg`` file for the same audio.
