@@ -1,0 +1,3 @@
+[submodule "wwise-audio-tools"]
+	path = wwise-audio-tools
+	url = https://github.com/WolvenKit/wwise-audio-tools
