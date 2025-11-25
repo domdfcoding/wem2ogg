@@ -77,6 +77,6 @@ reformat = true
 [tool.cibuildwheel]
 before-all = [
     "yum install cmake -y",
-    "python3 -m build_wwise_audio_tools.py",
+    "python3 build_wwise_audio_tools.py",
     'export LD_LIBRARY_PATH="$PWD/wwise-audio-tools/build/lib:$LD_LIBRARY_PATH"',
 ]
