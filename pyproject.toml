@@ -75,9 +75,5 @@ reformat = true
 [tool.snippet-fmt.languages.json]
 
 [tool.cibuildwheel]
-before-all = [
-    "yum install cmake -y",
-    "python3 build_wwise_audio_tools.py",
-    'export LD_LIBRARY_PATH="$PWD/wwise-audio-tools/build/lib:$LD_LIBRARY_PATH"',
-]
-repair-wheel-command = 'LD_LIBRARY_PATH="$PWD/wwise-audio-tools/build/lib:$LD_LIBRARY_PATH" auditwheel repair -w {dest_dir} {wheel}'
+before-all = [ "yum install cmake -y", "python3 build_wwise_audio_tools.py",]
+repair-wheel-command = 'LD_LIBRARY_PATH="{project}/wwise-audio-tools/build/lib:$LD_LIBRARY_PATH" auditwheel repair -w {dest_dir} {wheel}'
