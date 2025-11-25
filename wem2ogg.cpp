@@ -6,7 +6,7 @@
 #include <vector>
 
 static PyObject *wem_to_ogg(PyObject *self, PyObject *args) {
-	unsigned char *src;
+	char *src;
 	Py_ssize_t src_len;
 
 	if (!PyArg_ParseTuple(args, "y#", &src, &src_len)) {
@@ -14,10 +14,10 @@ static PyObject *wem_to_ogg(PyObject *self, PyObject *args) {
 		return NULL;
 	}
 
-	std::string indata((char *)src);
+	std::string indata{src, src_len};
 	std::string ogg_data = wwtools::wem_to_ogg(indata);
 
-	PyObject *pbo = PyBytes_FromString(ogg_data.c_str());
+	PyObject *pbo = PyBytes_FromStringAndSize(ogg_data.c_str(), ogg_data.length());
 
 	return pbo;
 }
