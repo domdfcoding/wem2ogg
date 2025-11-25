@@ -60,7 +60,7 @@ jobs:
         run: |
           python -VV
           python -m site
-          python -m pip install --upgrade pip setuptools wheel
+          python -m pip install --upgrade pip setuptools wheel auditwheel
           python -m pip install --upgrade tox~=3.0 virtualenv!=20.16.0
           sudo apt-get install cmake
           python build_wwise_audio_tools.py
