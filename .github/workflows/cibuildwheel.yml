@@ -24,6 +24,8 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v5
+        with:
+          submodules: "recursive"
 
       - name: Build wheels 📦
         uses: pypa/cibuildwheel@v3.3.0
@@ -46,6 +48,8 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v5
+        with:
+          submodules: "recursive"
 
       - name: Build sdist 📦
         run: pipx run build --sdist
