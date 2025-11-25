@@ -54,7 +54,7 @@ jobs:
       - name: Build sdist 📦
         run: |
           sudo apt-get install cmake
-          python -m build_wwise_audio_tools.py.py
+          python build_wwise_audio_tools.py
           pipx run build --sdist
 
       - uses: actions/upload-artifact@v4

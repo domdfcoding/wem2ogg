@@ -75,4 +75,4 @@ reformat = true
 [tool.snippet-fmt.languages.json]
 
 [tool.cibuildwheel]
-before-all = [ "apt-get install cmake", "python3 -m build_wwise_audio_tools.py",]
+before-all = [ "yum install cmake", "python3 -m build_wwise_audio_tools.py",]
