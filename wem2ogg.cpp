@@ -17,6 +17,11 @@ static PyObject *wem_to_ogg(PyObject *self, PyObject *args) {
 	std::string indata{src, src_len};
 	std::string ogg_data = wwtools::wem_to_ogg(indata);
 
+	if (!ogg_data.length()) {
+		PyErr_SetString(PyExc_ValueError, "Error converting wem to ogg");
+		return NULL;
+	}
+
 	PyObject *pbo = PyBytes_FromStringAndSize(ogg_data.c_str(), ogg_data.length());
 
 	return pbo;
