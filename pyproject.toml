@@ -45,6 +45,7 @@ platforms = [ "Linux",]
 license-key = "MIT"
 
 [tool.importcheck]
+always = [ "wem2ogg",]
 
 [tool.mypy]
 python_version = "3.10"

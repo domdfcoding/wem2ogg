@@ -13,3 +13,8 @@ bare-ignore:
 	greppy '# type:? *ignore(?!\[|\w)' -s
 
 lint:  bare-ignore
+
+clean:
+	rm -rf dist
+	rm -rf wwise-audio-tools/build/
+	rm -rf .tox
