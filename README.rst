@@ -22,7 +22,7 @@ wem2ogg
 	* - Activity
 	  - |commits-latest| |commits-since| |maintained| |pypi-downloads|
 	* - QA
-	  - |codefactor| |actions_flake8| |actions_mypy|
+	  - |codefactor|
 	* - Other
 	  - |license| |language| |requires|
 
