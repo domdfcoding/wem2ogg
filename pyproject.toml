@@ -80,3 +80,4 @@ before-all = [
     "python3 build_wwise_audio_tools.py",
     'export LD_LIBRARY_PATH="$PWD/wwise-audio-tools/build/lib:$LD_LIBRARY_PATH"',
 ]
+repair-wheel-command = 'LD_LIBRARY_PATH="$PWD/wwise-audio-tools/build/lib:$LD_LIBRARY_PATH" auditwheel repair -w {dest_dir} {wheel}'
