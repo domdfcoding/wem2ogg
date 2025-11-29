@@ -3,6 +3,7 @@ default_options : ['c_std=c11', 'cpp_std=c++14'])
 add_global_arguments('-DKS_STR_ENCODING_NONE', language : 'cpp')
 
 dependencies = []
+include_dirs = ['wwise-audio-tools/include']
 sources = [
     'wem2ogg.cpp',
     'wwise-audio-tools/src/ww2ogg/codebook.cpp',
@@ -28,6 +29,7 @@ libogg_dep = dependency('ogg', version : '>=1.3.4', required : false)
 if libvorbis_dep.found()
     dependencies += libvorbis_dep
 else
+    include_dirs += 'wwise-audio-tools/libvorbis/include'
     sources += ['libvorbis/mdct.c',
         'libvorbis/smallft.c',
         'libvorbis/block.c',
@@ -54,6 +56,7 @@ endif
 if libogg_dep.found()
     dependencies += libogg_dep
 else
+    include_dirs += 'wwise-audio-tools/libogg/include'
     sources += [
         'wwise-audio-tools/libogg/src/bitwise.c',
         'wwise-audio-tools/libogg/src/framing.c',
@@ -75,5 +78,5 @@ py.extension_module(
     dependencies: dependencies,
     install: true,
     #install_dir: py.get_install_dir() / 'wem2ogg'
-    include_directories : include_directories('wwise-audio-tools/include'),
+    include_directories : include_directories(include_dirs),
 )
