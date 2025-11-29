@@ -58,7 +58,7 @@ if libogg_dep.found()
 else
     include_dirs += [
         'wwise-audio-tools/libogg/include',
-        'wwise-audio-tools/libogg/include/ogg,
+        'wwise-audio-tools/libogg/include/ogg',
         ]
     sources += [
         'wwise-audio-tools/libogg/src/bitwise.c',
