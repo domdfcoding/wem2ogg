@@ -14,7 +14,7 @@ static PyObject *wem_to_ogg(PyObject *self, PyObject *args) {
 		return NULL;
 	}
 
-	std::string indata{src, src_len};
+	std::string indata{src, (size_t)src_len};
 	std::string ogg_data = wwtools::wem_to_ogg(indata);
 
 	if (!ogg_data.length()) {

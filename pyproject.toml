@@ -1,5 +1,5 @@
 [build-system]
-requires = [ "cmake", "meson-python",]
+requires = [ "cmake", "meson@ git+https://github.com/mesonbuild/meson", "meson-python",]
 build-backend = "mesonpy"
 
 [project]
@@ -11,6 +11,7 @@ requires-python = ">=3.10"
 keywords = []
 classifiers = [
     "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
     "Operating System :: POSIX :: Linux",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3 :: Only",
@@ -41,7 +42,7 @@ Homepage = "https://github.com/domdfcoding/wem2ogg"
 base-classifiers = []
 python-versions = [ "3.10", "3.11", "3.12",]
 python-implementations = [ "CPython",]
-platforms = [ "Linux",]
+platforms = [ "Linux", "Windows",]
 license-key = "MIT"
 
 [tool.importcheck]
@@ -75,7 +76,13 @@ reformat = true
 
 [tool.snippet-fmt.languages.json]
 
-[tool.cibuildwheel]
+[tool.cibuildwheel.linux]
 before-all = [ "yum install cmake -y", "python3 build_wwise_audio_tools.py",]
 repair-wheel-command = 'LD_LIBRARY_PATH="{project}/wwise-audio-tools/build/lib:$LD_LIBRARY_PATH" auditwheel repair -w {dest_dir} {wheel}'
 skip = [ "*-musllinux*",]
+
+[tool.cibuildwheel.windows.config-settings]
+setup-args = [ "--vsenv",]
+
+[tool.meson-python.args]
+setup = [ "--vsenv",]
