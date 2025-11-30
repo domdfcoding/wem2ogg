@@ -19,5 +19,6 @@ else:
 
 subprocess.check_output([command, "repair", *files, "-w", "dist"], env=env)
 
-for file in files:
-	file.unlink()
+if platform.system() == "Linux":
+	for file in files:
+		file.unlink()
