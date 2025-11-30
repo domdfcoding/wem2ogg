@@ -16,13 +16,13 @@ wem2ogg
 	:widths: 10 90
 
 	* - Tests
-	  - |actions_linux| |actions_windows|
+	  - |actions_linux| |actions_windows| |coveralls|
 	* - PyPI
 	  - |pypi-version| |supported-versions| |supported-implementations| |wheel|
 	* - Activity
 	  - |commits-latest| |commits-since| |maintained| |pypi-downloads|
 	* - QA
-	  - |codefactor|
+	  - |codefactor| |actions_flake8| |actions_mypy|
 	* - Other
 	  - |license| |language| |requires|
 
@@ -45,6 +45,10 @@ wem2ogg
 .. |requires| image:: https://dependency-dash.repo-helper.uk/github/domdfcoding/wem2ogg/badge.svg
 	:target: https://dependency-dash.repo-helper.uk/github/domdfcoding/wem2ogg/
 	:alt: Requirements Status
+
+.. |coveralls| image:: https://img.shields.io/coveralls/github/domdfcoding/wem2ogg/master?logo=coveralls
+	:target: https://coveralls.io/github/domdfcoding/wem2ogg?branch=master
+	:alt: Coverage
 
 .. |codefactor| image:: https://img.shields.io/codefactor/grade/github/domdfcoding/wem2ogg?logo=codefactor
 	:target: https://www.codefactor.io/repository/github/domdfcoding/wem2ogg

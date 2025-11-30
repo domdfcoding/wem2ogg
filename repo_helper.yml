@@ -11,8 +11,8 @@ short_desc: 'Convert Wwise WEM files to OGG.'
 
 enable_conda: false
 enable_docs: false
-enable_tests: false
 meson_no_py: true
+min_coverage: 0
 
 platforms:
  - Linux
@@ -35,6 +35,5 @@ tox_unmanaged:
 
 exclude_files:
   - actions
-  - justfile
 
 pre_commit_exclude: "^libvorbis/"
