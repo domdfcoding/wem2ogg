@@ -16,6 +16,7 @@ meson_no_py: true
 
 platforms:
  - Linux
+ - Windows
 
 python_versions:
   "3.10":

@@ -16,7 +16,7 @@ wem2ogg
 	:widths: 10 90
 
 	* - Tests
-	  - |actions_linux|
+	  - |actions_linux| |actions_windows|
 	* - PyPI
 	  - |pypi-version| |supported-versions| |supported-implementations| |wheel|
 	* - Activity
@@ -29,6 +29,10 @@ wem2ogg
 .. |actions_linux| image:: https://github.com/domdfcoding/wem2ogg/workflows/Linux/badge.svg
 	:target: https://github.com/domdfcoding/wem2ogg/actions?query=workflow%3A%22Linux%22
 	:alt: Linux Test Status
+
+.. |actions_windows| image:: https://github.com/domdfcoding/wem2ogg/workflows/Windows/badge.svg
+	:target: https://github.com/domdfcoding/wem2ogg/actions?query=workflow%3A%22Windows%22
+	:alt: Windows Test Status
 
 .. |actions_flake8| image:: https://github.com/domdfcoding/wem2ogg/workflows/Flake8/badge.svg
 	:target: https://github.com/domdfcoding/wem2ogg/actions?query=workflow%3A%22Flake8%22
