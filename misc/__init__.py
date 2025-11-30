@@ -1,5 +1,5 @@
 __version__: str = "0.1.1"
-__all__ = ["decompress"]
+__all__ = ["wem_to_ogg"]
 
 
 def _append_to_sharedlib_load_path():
