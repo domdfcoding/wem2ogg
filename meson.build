@@ -71,8 +71,8 @@ endif
 py = import('python').find_installation(pure: false)
 
 py.install_sources(
-    ['wem2ogg-stubs/__init__.pyi'],
-    subdir: 'wem2ogg-stubs'
+    ['misc/__init__.py', 'misc/py.typed', 'wem2ogg.pyi'],
+    subdir: 'wem2ogg'
 )
 
 py.extension_module(
@@ -80,6 +80,6 @@ py.extension_module(
     sources,
     dependencies: dependencies,
     install: true,
-    #install_dir: py.get_install_dir() / 'wem2ogg'
+    install_dir: py.get_install_dir() / 'wem2ogg',
     include_directories : include_directories(include_dirs),
 )
