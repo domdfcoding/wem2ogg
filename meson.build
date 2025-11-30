@@ -1,5 +1,5 @@
 project('purelib-and-platlib', ['c', 'cpp'],
-default_options : ['c_std=c11', 'cpp_std=c++14'])
+default_options : ['c_std=c11', 'cpp_std=c++17'])
 add_global_arguments('-DKS_STR_ENCODING_NONE', language : 'cpp')
 
 dependencies = []
