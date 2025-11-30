@@ -77,7 +77,7 @@ wem2ogg
 .. |language| image:: https://img.shields.io/github/languages/top/domdfcoding/wem2ogg
 	:alt: GitHub top language
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/domdfcoding/wem2ogg/v0.1.1
+.. |commits-since| image:: https://img.shields.io/github/commits-since/domdfcoding/wem2ogg/v0.2.0
 	:target: https://github.com/domdfcoding/wem2ogg/pulse
 	:alt: GitHub commits since tagged version
 
