@@ -83,3 +83,6 @@ skip = [ "*-musllinux*",]
 
 [tool.cibuildwheel.windows.config-settings]
 setup-args = [ "--vsenv",]
+
+[tool.meson-python.args]
+setup = [ "--vsenv",]
