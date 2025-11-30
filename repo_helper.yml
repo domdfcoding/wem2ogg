@@ -35,3 +35,5 @@ tox_unmanaged:
 exclude_files:
   - actions
   - justfile
+
+pre_commit_exclude: "^libvorbis/"

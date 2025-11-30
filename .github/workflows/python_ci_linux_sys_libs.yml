@@ -1,5 +1,5 @@
 ---
-name: Linux
+name: Linux (System Libraries)
 
 on:
   push:
@@ -36,7 +36,7 @@ jobs:
       - name: Checkout 🛎️
         uses: "actions/checkout@v4"
         with:
-          submodules: "recursive"
+          submodules: true
 
       - name: Check for changed files
         if: startsWith(github.ref, 'refs/tags/') != true
@@ -62,6 +62,7 @@ jobs:
           python -m site
           python -m pip install --upgrade pip setuptools wheel auditwheel
           python -m pip install --upgrade tox~=3.0 virtualenv!=20.16.0
+          sudo apt install libogg-dev libvorbis-dev
 
       - name: "Run Tests for Python ${{ matrix.config.python-version }}"
         if: steps.setup-python.outcome == 'success'
