@@ -13,6 +13,7 @@ enable_conda: false
 enable_docs: false
 meson_no_py: true
 min_coverage: 0
+checkout_submodules: recursive
 
 platforms:
  - Linux
