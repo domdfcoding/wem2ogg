@@ -85,11 +85,11 @@ wem2ogg
 	:target: https://github.com/domdfcoding/wem2ogg/commit/master
 	:alt: GitHub last commit
 
-.. |maintained| image:: https://img.shields.io/maintenance/yes/2025
+.. |maintained| image:: https://img.shields.io/maintenance/yes/2026
 	:alt: Maintenance
 
 .. |pypi-downloads| image:: https://img.shields.io/pypi/dm/wem2ogg
-	:target: https://pypi.org/project/wem2ogg/
+	:target: https://pypistats.org/packages/wem2ogg
 	:alt: PyPI - Downloads
 
 .. end shields
