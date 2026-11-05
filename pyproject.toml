@@ -1,5 +1,5 @@
 [build-system]
-requires = [ "cmake", "meson @ git+https://github.com/mesonbuild/meson", "meson-python",]
+requires = [ "cmake", "meson@ git+https://github.com/mesonbuild/meson", "meson-python",]
 build-backend = "mesonpy"
 
 [project]
